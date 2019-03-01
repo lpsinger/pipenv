@@ -2585,6 +2585,7 @@ def do_sync(
     ensure_project(
         three=three,
         python=python,
+        system=system,
         validate=False,
         deploy=deploy,
         pypi_mirror=pypi_mirror,

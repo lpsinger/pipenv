@@ -585,6 +585,7 @@ def run_open(state, module, *args, **kwargs):
 )
 @option("--bare", is_flag=True, default=False, help="Minimal output.")
 @sync_options
+@system_option
 @pass_state
 @pass_context
 def sync(
@@ -603,6 +604,7 @@ def sync(
         dev=state.installstate.dev,
         three=state.three,
         python=state.python,
+        system=state.system,
         bare=bare,
         dont_upgrade=(not state.installstate.keep_outdated),
         user=user,
